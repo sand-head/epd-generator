@@ -45,7 +45,7 @@ Public Class EventPlanningDocumentBuilder
             sheet.Cells().Item(1, 1, 4 + Events.Count, 4).Style.HorizontalAlignment = ExcelHorizontalAlignment.Left
             sheet.Cells().Item(1, 1, 4 + Events.Count, 4).Style.VerticalAlignment = ExcelVerticalAlignment.Top
             sheet.Cells(sheet.Dimension.Address).AutoFitColumns()
-            package.SaveAs(New FileInfo(String.Format("{0}\{1}.xlsx", Environment.CurrentDirectory, ProgramName)))
+            package.SaveAs(New FileInfo(String.Format("{0}\output\{1}.xlsx", Environment.CurrentDirectory, ProgramName)))
         End Using
     End Sub
 End Class
