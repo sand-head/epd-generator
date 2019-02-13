@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class frmEpdGenerator
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class frmEpdGenerator
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnGenerate = New System.Windows.Forms.Button()
@@ -30,11 +30,12 @@ Partial Class frmEpdGenerator
         Me.colEventTrigger = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colEventProcessing = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.pnlHeader = New System.Windows.Forms.Panel()
-        Me.lblObject = New System.Windows.Forms.Label()
+        Me.lblObjectName = New System.Windows.Forms.Label()
         Me.txtObject = New System.Windows.Forms.TextBox()
         Me.lblDeveloper = New System.Windows.Forms.Label()
         Me.txtDeveloper = New System.Windows.Forms.TextBox()
         Me.lblProgramName = New System.Windows.Forms.Label()
+        Me.btnImport = New System.Windows.Forms.Button()
         CType(Me.dgdEvents, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.pnlHeader.SuspendLayout()
         Me.SuspendLayout()
@@ -42,7 +43,7 @@ Partial Class frmEpdGenerator
         'btnGenerate
         '
         Me.btnGenerate.Enabled = False
-        Me.btnGenerate.Location = New System.Drawing.Point(693, 4)
+        Me.btnGenerate.Location = New System.Drawing.Point(387, 35)
         Me.btnGenerate.Name = "btnGenerate"
         Me.btnGenerate.Size = New System.Drawing.Size(95, 23)
         Me.btnGenerate.TabIndex = 0
@@ -51,7 +52,7 @@ Partial Class frmEpdGenerator
         '
         'txtProgramName
         '
-        Me.txtProgramName.Location = New System.Drawing.Point(98, 6)
+        Me.txtProgramName.Location = New System.Drawing.Point(98, 11)
         Me.txtProgramName.Name = "txtProgramName"
         Me.txtProgramName.Size = New System.Drawing.Size(150, 20)
         Me.txtProgramName.TabIndex = 1
@@ -63,9 +64,9 @@ Partial Class frmEpdGenerator
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dgdEvents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgdEvents.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colObject, Me.colEventTrigger, Me.colEventProcessing})
-        Me.dgdEvents.Location = New System.Drawing.Point(0, 32)
+        Me.dgdEvents.Location = New System.Drawing.Point(0, 68)
         Me.dgdEvents.Name = "dgdEvents"
-        Me.dgdEvents.Size = New System.Drawing.Size(800, 418)
+        Me.dgdEvents.Size = New System.Drawing.Size(497, 382)
         Me.dgdEvents.TabIndex = 4
         '
         'colObject
@@ -91,7 +92,8 @@ Partial Class frmEpdGenerator
         '
         'pnlHeader
         '
-        Me.pnlHeader.Controls.Add(Me.lblObject)
+        Me.pnlHeader.Controls.Add(Me.btnImport)
+        Me.pnlHeader.Controls.Add(Me.lblObjectName)
         Me.pnlHeader.Controls.Add(Me.txtObject)
         Me.pnlHeader.Controls.Add(Me.lblDeveloper)
         Me.pnlHeader.Controls.Add(Me.txtDeveloper)
@@ -101,22 +103,22 @@ Partial Class frmEpdGenerator
         Me.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlHeader.Location = New System.Drawing.Point(0, 0)
         Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(800, 30)
+        Me.pnlHeader.Size = New System.Drawing.Size(497, 67)
         Me.pnlHeader.TabIndex = 5
         '
-        'lblObject
+        'lblObjectName
         '
-        Me.lblObject.AutoSize = True
-        Me.lblObject.Location = New System.Drawing.Point(475, 9)
-        Me.lblObject.Name = "lblObject"
-        Me.lblObject.Size = New System.Drawing.Size(41, 13)
-        Me.lblObject.TabIndex = 8
-        Me.lblObject.Text = "Object:"
-        Me.lblObject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lblObjectName.AutoSize = True
+        Me.lblObjectName.Location = New System.Drawing.Point(254, 14)
+        Me.lblObjectName.Name = "lblObjectName"
+        Me.lblObjectName.Size = New System.Drawing.Size(72, 13)
+        Me.lblObjectName.TabIndex = 8
+        Me.lblObjectName.Text = "Object Name:"
+        Me.lblObjectName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtObject
         '
-        Me.txtObject.Location = New System.Drawing.Point(522, 6)
+        Me.txtObject.Location = New System.Drawing.Point(332, 11)
         Me.txtObject.Name = "txtObject"
         Me.txtObject.Size = New System.Drawing.Size(150, 20)
         Me.txtObject.TabIndex = 7
@@ -124,7 +126,7 @@ Partial Class frmEpdGenerator
         'lblDeveloper
         '
         Me.lblDeveloper.AutoSize = True
-        Me.lblDeveloper.Location = New System.Drawing.Point(254, 9)
+        Me.lblDeveloper.Location = New System.Drawing.Point(33, 40)
         Me.lblDeveloper.Name = "lblDeveloper"
         Me.lblDeveloper.Size = New System.Drawing.Size(59, 13)
         Me.lblDeveloper.TabIndex = 6
@@ -133,7 +135,7 @@ Partial Class frmEpdGenerator
         '
         'txtDeveloper
         '
-        Me.txtDeveloper.Location = New System.Drawing.Point(319, 6)
+        Me.txtDeveloper.Location = New System.Drawing.Point(98, 37)
         Me.txtDeveloper.Name = "txtDeveloper"
         Me.txtDeveloper.Size = New System.Drawing.Size(150, 20)
         Me.txtDeveloper.TabIndex = 5
@@ -141,18 +143,27 @@ Partial Class frmEpdGenerator
         'lblProgramName
         '
         Me.lblProgramName.AutoSize = True
-        Me.lblProgramName.Location = New System.Drawing.Point(12, 9)
+        Me.lblProgramName.Location = New System.Drawing.Point(12, 14)
         Me.lblProgramName.Name = "lblProgramName"
         Me.lblProgramName.Size = New System.Drawing.Size(80, 13)
         Me.lblProgramName.TabIndex = 4
         Me.lblProgramName.Text = "Program Name:"
         Me.lblProgramName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'btnImport
+        '
+        Me.btnImport.Location = New System.Drawing.Point(286, 35)
+        Me.btnImport.Name = "btnImport"
+        Me.btnImport.Size = New System.Drawing.Size(95, 23)
+        Me.btnImport.TabIndex = 9
+        Me.btnImport.Text = "Import"
+        Me.btnImport.UseVisualStyleBackColor = True
+        '
         'frmEpdGenerator
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(497, 450)
         Me.Controls.Add(Me.pnlHeader)
         Me.Controls.Add(Me.dgdEvents)
         Me.Name = "frmEpdGenerator"
@@ -171,9 +182,10 @@ Partial Class frmEpdGenerator
     Friend WithEvents colEventTrigger As DataGridViewTextBoxColumn
     Friend WithEvents colEventProcessing As DataGridViewTextBoxColumn
     Friend WithEvents pnlHeader As Panel
-    Friend WithEvents lblObject As Label
+    Friend WithEvents lblObjectName As Label
     Friend WithEvents txtObject As TextBox
     Friend WithEvents lblDeveloper As Label
     Friend WithEvents txtDeveloper As TextBox
     Friend WithEvents lblProgramName As Label
+    Friend WithEvents btnImport As Button
 End Class

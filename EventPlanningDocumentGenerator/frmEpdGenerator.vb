@@ -1,4 +1,6 @@
-﻿Public Class frmEpdGenerator
+﻿Imports System.IO
+
+Public Class frmEpdGenerator
     Private Property _edpBuilder As EventPlanningDocumentBuilder
 
     Public Sub New()
@@ -36,5 +38,9 @@
             events.Add(New EventPlan(If(row.Cells().Item(0)?.Value, ""), If(row.Cells().Item(1)?.Value, ""), If(row.Cells().Item(2)?.Value, "")))
         Next
         _edpBuilder.BuildAndSaveFile(txtProgramName.Text, txtDeveloper.Text, txtObject.Text, events)
+    End Sub
+
+    Private Sub btnImport_Click(sender As Object, e As EventArgs) Handles btnImport.Click
+        frmImport.Show()
     End Sub
 End Class

@@ -88,7 +88,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EventPlanningDocumentBuilder.vb" />
+    <Compile Include="frmImport.Designer.vb">
+      <DependentUpon>frmImport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmImport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Infrastructure\EventPlanningDocumentBuilder.vb" />
     <Compile Include="frmEpdGenerator.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -96,7 +102,9 @@
       <DependentUpon>frmEpdGenerator.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Infrastructure\SolutionReader.vb" />
     <Compile Include="Models\EventPlan.vb" />
+    <Compile Include="Models\VisualStudioProject.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -116,6 +124,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmEpdGenerator.resx">
       <DependentUpon>frmEpdGenerator.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImport.resx">
+      <DependentUpon>frmImport.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
