@@ -103,6 +103,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Infrastructure\SolutionReader.vb" />
+    <Compile Include="Models\ClassReference.vb" />
     <Compile Include="Models\EventPlan.vb" />
     <Compile Include="Models\VisualStudioProject.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

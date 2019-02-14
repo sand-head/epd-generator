@@ -96,6 +96,7 @@ Partial Class frmImport
         '
         'cboClass
         '
+        Me.cboClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboClass.Enabled = False
         Me.cboClass.FormattingEnabled = True
         Me.cboClass.Location = New System.Drawing.Point(6, 19)
@@ -105,6 +106,7 @@ Partial Class frmImport
         '
         'cboProject
         '
+        Me.cboProject.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboProject.Enabled = False
         Me.cboProject.FormattingEnabled = True
         Me.cboProject.Location = New System.Drawing.Point(6, 19)

@@ -9,6 +9,10 @@
     Public Property Name As String
     Public Property FilePath As String
 
+    Public Function GetClasses() As List(Of ClassReference)
+
+    End Function
+
     Public Overrides Function ToString() As String
         Return Name
     End Function

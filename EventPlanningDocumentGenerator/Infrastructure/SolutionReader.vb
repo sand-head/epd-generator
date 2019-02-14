@@ -7,7 +7,7 @@ Public Class SolutionReader
 
     Public Sub New(File As String)
         _filePath = File
-        _slnRegex = New Regex("Project\(""{(?:[A-Z-0-9]+)}""\) = ""([A-Za-z0-9 ]+)"", ""([A-Za-z0-9\\. ]+)"", ""{([A-Z-0-9]+)}""")
+        _slnRegex = New Regex("Project\(""{(?:[A-Z-0-9]+)}""\) = ""([A-Za-z0-9. ]+)"", ""([A-Za-z0-9\\. ]+)"", ""{([A-Z-0-9]+)}""")
     End Sub
 
     ' Reads projects off of the given solution

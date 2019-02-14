@@ -1,6 +1,4 @@
-﻿Imports System.IO
-
-Public Class frmImport
+﻿Public Class frmImport
     Private Property _slnReader As SolutionReader
 
     Public Sub New()
@@ -17,5 +15,14 @@ Public Class frmImport
         Dim projects = _slnReader.ReadProjects()
         cboProject.Items.AddRange(projects.ToArray())
         cboProject.Enabled = True
+    End Sub
+
+    Private Sub cboProject_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboProject.SelectedIndexChanged
+        If cboProject.SelectedIndex = 0 Then
+            cboClass.Enabled = False
+            Return
+        End If
+
+        cboClass.Enabled = True
     End Sub
 End Class
